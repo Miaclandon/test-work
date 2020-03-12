@@ -1,7 +1,7 @@
 import React from 'react';
-import './NavbarMenuRight';
-import user from './images/city.png';
-import city from './images/user.jpg';
+import './NavbarMenuRight.css';
+import city from './images/city.png';
+import user from './images/user.png';
 
 
 function NavbarMenuRight() {
