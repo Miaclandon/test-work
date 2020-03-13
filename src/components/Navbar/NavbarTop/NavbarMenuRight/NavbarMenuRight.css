@@ -3,7 +3,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: -20px;
-    margin-left: 300px;
 }
 .item__navbar__top{
     display: flex;
@@ -11,7 +10,7 @@
     flex-wrap: wrap;
     align-self: center;
     color: #766259;
-    margin-right: 36px;
+    margin-right: 20px;
     font-size: 13px;
     font-family: Calibri;
 }

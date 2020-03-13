@@ -5,8 +5,10 @@ class ItemNavbar extends React.Component {
     render() {
         const {name} = this.props.data
         return(
-            <div className="navbar__menu__left">
-                    <a href="#" className="item__navbar__top">{name}</a>
+            <div className="navbar__menu__top__left">
+                    <ul>
+                        <li><a href="#" className="item__navbar__top">{name}</a></li>
+                    </ul>
             </div>
         )
     }

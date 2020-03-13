@@ -1,5 +1,8 @@
 .App{
-   display: flex;
+    background: url("./components/Navbar/images/шапка.png")no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;

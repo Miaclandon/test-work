@@ -6,7 +6,6 @@ import NavbarBottom from "./NavbarBottom/NavbarBottom";
 
 function Navbar() {
     return (
-        <div className="fon1 fon2">
             <div className="navbar_menu ">
                 <React.Fragment>
                    <NavbarTop/>
@@ -14,8 +13,6 @@ function Navbar() {
                    <NavbarBottom/>
                 </React.Fragment>
             </div>
-        </div>
-
     );
 }
 
