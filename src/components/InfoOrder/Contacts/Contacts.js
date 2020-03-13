@@ -12,6 +12,7 @@ class Contacts extends Component {
             emailValid: false,
             phoneValid: false,
             formValid: false
+
         }
     }
 
