@@ -28,7 +28,7 @@ const itemNavigationMenu = [
 
 function NavbarTop() {
     return (
-        <div className="navbar">
+        <div className="navbar__top">
             <React.Fragment>
                 <NavbarMenuLeft data={itemNavigationMenu}/>
                 <NavbarMenuRight/>

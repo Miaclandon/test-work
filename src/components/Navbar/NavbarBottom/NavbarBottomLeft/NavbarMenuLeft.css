@@ -10,10 +10,3 @@
     text-decoration: none;
     color: #461f02;
 }
-@media screen and (max-width: 1024px) {
-    .item__bottom__navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-}
