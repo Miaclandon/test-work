@@ -1,0 +1,38 @@
+.contacts_order, .form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-under_group{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+.form-group{
+    margin-right: 21px;
+}
+.form-group input{
+    width: 184px;
+    height: 34px;
+    border: 1px solid #c4b7b1;
+    font-family: Calibri;
+    border-radius: 3px ;
+    padding-left: 12px;
+    margin-top: 4px;
+}
+.form-group label{
+    font-family: Calibri;
+    font-size: 14pt;
+    color: #817068;
+}
+.contacts_order h2{
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 25px;
+}
+@media screen and (max-width: 1024px) {
+    .form-under_group{
+        justify-content: center;
+    }
+}

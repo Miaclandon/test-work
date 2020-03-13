@@ -1,0 +1,28 @@
+.navbar__medium__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /*margin-bottom: 30px;*/
+}
+.navbar__medium__right h1{
+    font-family: Georgia;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 28pt;
+    color: #461f02;
+}
+.navbar__medium__right a{
+    color: #766259;
+    margin-top: -20px;
+    width: 132px;
+    margin-left: 170px;
+    font-family: Calibri;
+    font-size: 13pt;
+    text-decoration: none;
+    border-bottom: 1px dashed #766259;
+}
+@media screen and (max-width: 1024px) {
+    .navbar__medium__right{
+        margin-left: 0;
+    }
+}

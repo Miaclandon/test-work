@@ -1,0 +1,33 @@
+.adress_order{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.delivery__order h2{
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 16pt;
+}
+.form-group-adress {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-adress{
+    margin-right: 21px;
+}
+.form-group-adress input, .form-group-adress select{
+    width: 184px;
+    height: 34px;
+    border: 1px solid #c4b7b1;
+    font-family: Calibri;
+    border-radius: 3px ;
+    padding-left: 12px;
+    margin-top: 4px;
+}
+.form-group-adress label{
+    font-family: Calibri;
+    font-size: 14pt;
+    color: #817068;
+}

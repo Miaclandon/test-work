@@ -1,0 +1,15 @@
+.navbar__medium{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 9px;
+    justify-content: space-between;
+
+}
+@media screen and (max-width: 1024px) {
+    .navbar__medium{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

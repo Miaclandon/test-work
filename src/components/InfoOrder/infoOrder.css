@@ -1,0 +1,30 @@
+.block_order {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.block_order_right_your_order h2{
+    font-size: 25px;
+}
+.block_order_header{
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 36px;
+}
+.block_order_left_checkout button{
+    width: 196px;
+    height: 47px;
+    background: #fdfcfa;
+    border: 1px solid #f0e4ca;
+    outline: none;
+    margin: 2px 0;
+}
+.block_order_left_checkout button:active{
+    text-decoration: red;
+    border-width: 1.5px; /* Толщина линии внизу */
+    border-bottom-style: dashed; /* Стиль линии внизу */
+    border-top-style: dashed; /* Стиль линии внизу */
+    border-right-style: dashed;
+    border-color: #d15b0a; /* Цвет линии внизу */
+}
