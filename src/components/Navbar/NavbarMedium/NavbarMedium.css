@@ -3,6 +3,9 @@
     flex-direction: row;
     margin-top: 9px;
     justify-content: space-between;
+    border-width: 1.5px; /* Толщина линии внизу */
+    border-bottom-style: solid; /* Стиль линии внизу */
+    border-color: #d2c8bd; /* Цвет линии внизу */
 
 }
 @media screen and (max-width: 1024px) {

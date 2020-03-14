@@ -1,6 +1,6 @@
 import React from 'react';
 import NavbarMediumMenuLeft from "./NavbarBottomLeft/NavbarMenuLeft";
-import NavbarMenuBottomRight from "./NavbarBottomRight/NavbarMenuRight";
+import NavbarMenuBottomRight from "./NavbarBottomRight/NavbarMenuBottomRight";
 import './NavbarBottom.css';
 
 const itemNavbarMenu = [
