@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavbarMenuLeft.css';
+import './NavbarMenuTopLeft.css';
 
 class ItemNavbar extends React.Component {
     render() {
@@ -7,14 +7,14 @@ class ItemNavbar extends React.Component {
         return(
             <div className="navbar__menu__top__left">
                     <ul>
-                        <li><a href="#" className="item__navbar__top">{name}</a></li>
+                        <li><a href="#" className="item__navbar__menu__top">{name}</a></li>
                     </ul>
             </div>
         )
     }
 }
 
-class NavbarMenuLeft extends React.Component {
+class NavbarMenuTopLeft extends React.Component {
     render() {
         const { data } = this.props
         let itemNavbarMenu
@@ -28,11 +28,11 @@ class NavbarMenuLeft extends React.Component {
             }
 
             return (
-                <div className="item__navbar__top">
+                <div className="item__navbar__menu__top">
                     {itemNavbarMenu}
                 </div>
             )
         }
     }
 
-export default NavbarMenuLeft;
+export default NavbarMenuTopLeft;

@@ -1,6 +1,15 @@
 .navbar_menu{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+.navbar__for__phone {
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .navbar__for__phone{
+        display: flex;
+        flex-direction: column;
+    }
 }

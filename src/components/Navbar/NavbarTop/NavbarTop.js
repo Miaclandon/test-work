@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavbarTop.css'
-import NavbarMenuLeft from "./NavbarMenuLeft/NavbarMenuLeft";
+import NavbarMenuTopLeft from "./NavbarMenuTopLeft/NavbarMenuTopLeft";
 import NavbarMenuRight from "./NavbarMenuRight/NavbarMenuRight";
 
 const itemNavigationMenu = [
@@ -30,7 +30,7 @@ function NavbarTop() {
     return (
         <div className="navbar__top">
             <React.Fragment>
-                <NavbarMenuLeft data={itemNavigationMenu}/>
+                <NavbarMenuTopLeft data={itemNavigationMenu}/>
                 <NavbarMenuRight/>
         </React.Fragment>
         </div>

@@ -1,0 +1,23 @@
+.item__navbar__menu__top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.item__navbar__menu__top a{
+    color: #766259;
+    font-family: Calibri;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px dashed #766259;
+}
+@media screen and (max-width: 1024px) {
+    .navbar__menu__top__left a{
+        font-size: 24px;
+    }
+    .item__navbar__menu__top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}

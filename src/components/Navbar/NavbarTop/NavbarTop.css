@@ -3,6 +3,8 @@
     flex-direction: row;
     align-items: baseline;
     border-bottom: 1px solid #e6e0d8;
+    margin-right: 50px;
+
 }
 li{
     list-style-type: none;
