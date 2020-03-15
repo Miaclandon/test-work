@@ -6,14 +6,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 6px;
 }
 .form-group{
     margin-right: 21px;
 }
 .form-group input{
-    width: 184px;
-    height: 34px;
+    width: 174px;
+    height: 31px;
     border: 1px solid #c4b7b1;
     font-family: Calibri;
     border-radius: 3px ;
@@ -22,7 +21,7 @@
 }
 .form-group label{
     font-family: Calibri;
-    font-size: 14pt;
+    font-size: 14px;
     color: #817068;
 }
 .contacts_order h2{
@@ -34,7 +33,7 @@
 .phone_form{
     display: flex;
     flex-direction: row;
-    margin-bottom: -15px;
+    margin-left: -10px;
 }
 .phone_form input{
     border-radius: 0 3px 3px 0 ;
@@ -42,7 +41,7 @@
 }
 .phone_form p{
     width: 40px;
-    height: 30px;
+    height: 27px;
     border: 1px solid #c4b7b1;
     font-family: Calibri;
     border-radius: 3px 0 0 3px ;
@@ -53,6 +52,17 @@
 }
 .form-group-phone{
     margin-left: -10px;
+}
+input:focus:invalid {
+    border-color: red;
+    color: red;
+    box-shadow: none;
+    outline: none;
+}
+input:focus:valid {
+    border-color: green;
+    color: green;
+    box-shadow: none;
 }
 @media screen and (max-width: 1024px) {
     .form-under_group{

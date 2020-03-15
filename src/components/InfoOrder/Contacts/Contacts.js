@@ -37,7 +37,7 @@ class Contacts extends Component {
                     'может содержать только латиницу.';
                 break;
             case 'phone':
-                phoneValid = value.match(/\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/);
+                phoneValid = value.match(/^\d[\d\(\)\ -]{4,14}\d$/);
                 fieldValidationErrors.phone = phoneValid ? '' : 'Недопустимые символы. Это поле \n' +
                     'может содержать только цифры.';
             default:
@@ -81,13 +81,13 @@ class Contacts extends Component {
                                    value={this.state.email}
                                    onChange={this.handleUserInput}  />
                             <FormErrors formErrors={this.state.formErrors} />
-                            {/*<FormErrors formErrors={this.state.formErrors.email} />*/}
+                            <FormErrors formErrors={this.state.formErrors.email} />
                         </div>
                         <div className={`form-group ${this.errorClass(this.state.formErrors.phone)} form-group-phone`}>
                             <label htmlFor="phone">&nbsp;&nbsp;Номер телефона</label>
                             <div className="phone_form">
                                 <p>+7</p>
-                                <input type="phone" className="form-control" name="phone"
+                                <input type="phone" className="form-control" name="phone" maxlength="10"
                                        placeholder="999 432-34-21"
                                        value={this.state.phone}
                                        onChange={this.handleUserInput}  />

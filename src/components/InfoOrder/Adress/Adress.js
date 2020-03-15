@@ -27,23 +27,19 @@ class Adress extends React.Component {
                     <h2>Адрес и способ доставки</h2>
                     <div className="adress_order">
                         <div className="form-group-adress">
-                            {/*<form onSubmit={this.handleSubmit}>*/}
-                                <label>
-                                    Страна
+                                <label>Страна </label>
                                     <select value={this.state.value} onChange={this.handleChange}>
                                         <option value="ru">Россия</option>
                                         <option value="uk">Украина</option>
                                         <option value="kz">Казахстан</option>
                                     </select>
-                                </label>
-                            {/*</form>*/}
+
                         </div>
                         <div className="form-group-adress">
                             <label>Город</label>
                             <input type="text" name="city"/>
                         </div>
                     </div>
-                    <YandexMap/>
                 </React.Fragment>
             </div>
         )}
