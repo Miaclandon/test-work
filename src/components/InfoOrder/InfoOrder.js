@@ -10,7 +10,7 @@ function InfoOrder() {
             <React.Fragment>
                 <div className="block_order_left_checkout">
                     <h2 className="block_order_header">Оформление заказа</h2>
-
+                    <Person/>
                     <Contacts/>
                     <Adress/>
                 </div>

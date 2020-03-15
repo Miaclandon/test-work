@@ -31,8 +31,38 @@
     font-weight: lighter;
     font-size: 25px;
 }
+.phone_form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -15px;
+}
+.phone_form input{
+    border-radius: 0 3px 3px 0 ;
+    width: 121px;
+}
+.phone_form p{
+    width: 40px;
+    height: 30px;
+    border: 1px solid #c4b7b1;
+    font-family: Calibri;
+    border-radius: 3px 0 0 3px ;
+    margin-top: 4px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 6px;
+}
+.form-group-phone{
+    margin-left: -10px;
+}
 @media screen and (max-width: 1024px) {
     .form-under_group{
         justify-content: center;
     }
+    .form-group-phone, .form-group-email{
+        margin-left: 5px;
+    }
+    .form-group-email{
+        margin-left: 10px;
+    }
+
 }

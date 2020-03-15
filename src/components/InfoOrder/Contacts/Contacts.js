@@ -33,11 +33,13 @@ class Contacts extends Component {
         switch (fieldName) {
             case 'email':
                 emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-                fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+                fieldValidationErrors.email = emailValid ? '' : ' Недопустимые символы. Это поле \n' +
+                    'может содержать только латиницу.';
                 break;
             case 'phone':
                 phoneValid = value.match(/\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/);
-                fieldValidationErrors.phone = phoneValid ? '' : 'is valid';
+                fieldValidationErrors.phone = phoneValid ? '' : 'Недопустимые символы. Это поле \n' +
+                    'может содержать только цифры.';
             default:
                 break;
         }
@@ -71,35 +73,28 @@ class Contacts extends Component {
                             <input type="text" name="fullname" placeholder="Фамилия"/>
                         </div>
                     </div>
-                    <div className="panel panel-default">
-                        <FormErrors formErrors={this.state.formErrors} />
-                    </div>
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-                        <label htmlFor="email">Email address</label>
-                        <input type="email" required className="form-control" name="email"
-                               placeholder="Email"
-                               value={this.state.email}
-                               onChange={this.handleUserInput}  />
-                    </div>
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.phone)}`}>
-                        <label htmlFor="phone">Phone</label>
-                        <input type="phone" className="form-control" name="phone"
-                               placeholder="Phone"
-                               value={this.state.phone}
-                               onChange={this.handleUserInput}  />
-                    </div>
-                    {/*<div className="form-under_group">*/}
-                    {/*    <div className="form-group">*/}
-                    {/*        <label htmlFor="email">&nbsp;&nbsp;Эл.почта</label>*/}
-                    {/*        <input type="email" className="form-control" name="email"/>*/}
-                    {/*    </div>*/}
-                    {/*    <div className="form-group">*/}
-                    {/*        <label>&nbsp;&nbsp;Номер телефона</label>*/}
-                    {/*        <div>*/}
-                    {/*            <input type="email" name="email"/>*/}
-                    {/*        </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
+                    <div className={`form-under_group ${this.errorClass(this.state.formErrors.email)} form-group-email`}>
+                        <div className="form-group">
+                            <label htmlFor="email">&nbsp;&nbsp;Эл.почта</label>
+                            <input type="email" required className="form-control" name="email"
+                                   placeholder="Email"
+                                   value={this.state.email}
+                                   onChange={this.handleUserInput}  />
+                            <FormErrors formErrors={this.state.formErrors} />
+                            {/*<FormErrors formErrors={this.state.formErrors.email} />*/}
+                        </div>
+                        <div className={`form-group ${this.errorClass(this.state.formErrors.phone)} form-group-phone`}>
+                            <label htmlFor="phone">&nbsp;&nbsp;Номер телефона</label>
+                            <div className="phone_form">
+                                <p>+7</p>
+                                <input type="phone" className="form-control" name="phone"
+                                       placeholder="999 432-34-21"
+                                       value={this.state.phone}
+                                       onChange={this.handleUserInput}  />
+                            </div>
+                                <FormErrors formErrors={this.state.formErrors} />
+                            </div>
+                        </div>
                 </React.Fragment>
             </div>
 
