@@ -1,7 +1,23 @@
+.up, .down{
+    float:left;
+    width:100px;
+    height:100px;
+}
+.up{
+
+    border-radius:100px;
+    border-top:3px solid black;
+}
+.down {
+    border-radius: 100px;
+    border-bottom: 3px solid black;
+}
 .block_order {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: white;
+    padding-left: 31px;
 }
 .block_order_right_your_order h2{
     font-size: 25px;
