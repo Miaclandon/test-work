@@ -50,7 +50,7 @@
     text-align: center;
     padding-top: 6px;
 }
-.form-group-phone{
+.form-group-fullname{
     margin-left: -10px;
 }
 input:focus:invalid {
@@ -59,7 +59,13 @@ input:focus:invalid {
     box-shadow: none;
     outline: none;
 }
+
 input:focus:valid {
+    border-color: green;
+    color: green;
+    box-shadow: none;
+}
+input:valid {
     border-color: green;
     color: green;
     box-shadow: none;
@@ -67,9 +73,10 @@ input:focus:valid {
 @media screen and (max-width: 1024px) {
     .form-under_group{
         justify-content: center;
+        margin-right: 9px;
     }
-    .form-group-phone, .form-group-email{
-        margin-left: 5px;
+    .form-group-phone, .form-group-emai{
+        margin: 0;
     }
     .form-group-email{
         margin-left: 10px;

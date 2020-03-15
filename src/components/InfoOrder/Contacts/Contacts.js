@@ -6,9 +6,13 @@ class Contacts extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            name: '',
+            fullname: '',
             email: '',
             phone: '',
-            formErrors: {email: '', phone: ''},
+            formErrors: {name: '',fullname: '',email: '', phone: ''},
+            nameValid: false,
+            fullnameValid: false,
             emailValid: false,
             phoneValid: false,
             formValid: false
@@ -27,10 +31,22 @@ class Contacts extends Component {
 
     validateField(fieldName, value) {
         let fieldValidationErrors = this.state.formErrors;
+        let nameValid = this.state.nameValid;
+        let fullnameValid = this.state.fullnameValid;
         let emailValid = this.state.emailValid;
         let phoneValid = this.state.phoneValid;
 
         switch (fieldName) {
+            case 'name':
+                nameValid = value.match(/^[А-Я][а-я]*/);
+                fieldValidationErrors.name = nameValid ? '' : ' Недопустимые символы. Это поле \n' +
+                    'может содержать только русские буквы.';
+                break;
+            case 'fullname':
+                fullnameValid = value.match(/^[А-Я][а-я]*/);
+                fieldValidationErrors.fullname = fullnameValid ? '' : ' Недопустимые символы. Это поле \n' +
+                    'может содержать только русские буквы.';
+                break;
             case 'email':
                 emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
                 fieldValidationErrors.email = emailValid ? '' : ' Недопустимые символы. Это поле \n' +
@@ -40,18 +56,21 @@ class Contacts extends Component {
                 phoneValid = value.match(/^\d[\d\(\)\ -]{4,14}\d$/);
                 fieldValidationErrors.phone = phoneValid ? '' : 'Недопустимые символы. Это поле \n' +
                     'может содержать только цифры.';
+                break;
             default:
                 break;
         }
         this.setState({
             formErrors: fieldValidationErrors,
+            nameValid: nameValid,
+            fullnameValid: fullnameValid,
             emailValid: emailValid,
             phoneValid: phoneValid
         }, this.validateForm);
     }
 
     validateForm() {
-        this.setState({formValid: this.state.emailValid && this.state.phoneValid});
+        this.setState({formValid: this.state.nameValid && this.state.fullnameValid && this.state.emailValid && this.state.phoneValid});
     }
 
     errorClass(error) {
@@ -64,13 +83,25 @@ class Contacts extends Component {
                 <React.Fragment>
                     <h2>Контактные данные</h2>
                     <div className="form-under_group">
-                        <div className="form-group">
-                            <label>&nbsp;&nbsp;Имя</label>
-                            <input type="text" name="name" placeholder="Имя"/>
+                        <div className={`form-under_group ${this.errorClass(this.state.formErrors.name)}`}>
+                            <div className="form-group">
+                                <label htmlFor="name">&nbsp;&nbsp;Имя</label>
+                                <input type="name" required className="form-control" name="name"
+                                       placeholder="Имя"
+                                       value={this.state.name}
+                                       onChange={this.handleUserInput}  />
+                                <FormErrors formErrors={this.state.formErrors} />
+                            </div>
                         </div>
-                        <div className="form-group">
-                            <label>&nbsp;&nbsp;Фамилия</label>
-                            <input type="text" name="fullname" placeholder="Фамилия"/>
+                        <div className={`form-under_group ${this.errorClass(this.state.formErrors.fullname)} form-group-fullname`}>
+                            <div className="form-group">
+                                <label htmlFor="fullname">&nbsp;&nbsp;Фамилия</label>
+                                <input type="fullname" required className="form-control" name="fullname"
+                                       placeholder="Фамилия"
+                                       value={this.state.fullname}
+                                       onChange={this.handleUserInput}  />
+                                <FormErrors formErrors={this.state.formErrors} />
+                            </div>
                         </div>
                     </div>
                     <div className={`form-under_group ${this.errorClass(this.state.formErrors.email)} form-group-email`}>
@@ -81,7 +112,6 @@ class Contacts extends Component {
                                    value={this.state.email}
                                    onChange={this.handleUserInput}  />
                             <FormErrors formErrors={this.state.formErrors} />
-                            <FormErrors formErrors={this.state.formErrors.email} />
                         </div>
                         <div className={`form-group ${this.errorClass(this.state.formErrors.phone)} form-group-phone`}>
                             <label htmlFor="phone">&nbsp;&nbsp;Номер телефона</label>

@@ -1,6 +1,7 @@
 import React from 'react';
 import YandexMap from "./Delivery/Map/Map";
 import './Adress.css';
+import Delivery from "./Delivery/Delivery";
 
 class Adress extends React.Component {
     constructor(props) {
@@ -8,17 +9,12 @@ class Adress extends React.Component {
         this.state = {value: 'coconut'};
 
         this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
         this.setState({value: event.target.value});
     }
 
-    // handleSubmit(event) {
-    //     alert('Выбранная страна: ' + this.state.value);
-    //     event.preventDefault();
-    // }
 
     render() {
         return (
@@ -40,6 +36,7 @@ class Adress extends React.Component {
                             <input type="text" name="city"/>
                         </div>
                     </div>
+                    <Delivery/>
                 </React.Fragment>
             </div>
         )}
