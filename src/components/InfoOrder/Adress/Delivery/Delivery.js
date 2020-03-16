@@ -1,5 +1,6 @@
 import React from "react";
-import YandexMap from "./Map/Map";
+import "./Delivery.css";
+import YandexMap from "./PickupPoint/Map/Map";
 
 class Delivery extends React.Component{
     constructor(props) {
@@ -37,9 +38,7 @@ class Delivery extends React.Component{
                                     className="delivery__form-check-input"
                                 />
                                 Option1
-                                <p>Тут</p>
                             </label>
-
                         </div>
                         <div className="delivery__form-check">
                             <label>
@@ -54,8 +53,20 @@ class Delivery extends React.Component{
                                 Option2
                             </label>
                         </div>
+                        <div className="delivery__form-check-last">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="react-tips"
+                                    value="option2"
+                                    checked={this.state.selectedOption === "option2"}
+                                    onChange={this.handleOptionChange}
+                                    className="delivery__form-check-input"
+                                />
+                                Option2
+                            </label>
+                        </div>
                     </form>
-                    <YandexMap/>
                 </React.Fragment>
             </div>
         )

@@ -14,7 +14,6 @@
     flex-direction: column;
     margin-right: 21px;
 }
-
 .form-group-adress input, .form-group-adress select{
     width: 174px;
     height: 31px;
@@ -31,4 +30,9 @@
     font-family: Calibri;
     font-size: 14px;
     color: #817068;
+}
+@media screen and (max-width: 1024px) {
+    .adress_order{
+        justify-content: center;
+    }
 }

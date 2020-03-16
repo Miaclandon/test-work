@@ -1,16 +1,5 @@
-.up, .down{
-    float:left;
-    width:100px;
-    height:100px;
-}
-.up{
-
-    border-radius:100px;
-    border-top:3px solid black;
-}
-.down {
-    border-radius: 100px;
-    border-bottom: 3px solid black;
+.order{
+    background-color: white;
 }
 .block_order {
     display: flex;

@@ -17,10 +17,12 @@ class Person extends React.Component {
             // <button onClick={this.handleClick}>
             //     {this.state.isToggleOn ? 'ON' : 'OFF'}
             // </button>
-            <React.Fragment>
-                <button onClick={this.handleClick}>Физическое лицо</button>
-                <button onClick={this.handleClick}>Юридическое лицо  </button>
-            </React.Fragment>
+            <div className="block_choose_person">
+                <React.Fragment>
+                    <button onClick={this.handleClick}>Физическое лицо</button>
+                    <button onClick={this.handleClick}>Юридическое лицо  </button>
+                </React.Fragment>
+            </div>
 
         );
     }

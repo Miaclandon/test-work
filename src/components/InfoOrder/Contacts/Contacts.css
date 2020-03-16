@@ -65,21 +65,17 @@ input:focus:valid {
     color: green;
     box-shadow: none;
 }
-input:valid {
-    border-color: green;
-    color: green;
-    box-shadow: none;
-}
+
 @media screen and (max-width: 1024px) {
     .form-under_group{
         justify-content: center;
-        margin-right: 9px;
     }
-    .form-group-phone, .form-group-emai{
-        margin: 0;
+    .form-group-fullname, .form-group-email{
+        margin-left: 1px;
     }
-    .form-group-email{
-        margin-left: 10px;
+    .form-group-phone{
+        margin-left: 22px;
     }
+
 
 }

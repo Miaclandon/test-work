@@ -1,7 +1,7 @@
 import React from 'react';
-import YandexMap from "./Delivery/Map/Map";
 import './Adress.css';
 import Delivery from "./Delivery/Delivery";
+import PickUpPoint from "./Delivery/PickupPoint/PickupPoint";
 
 class Adress extends React.Component {
     constructor(props) {
@@ -14,8 +14,6 @@ class Adress extends React.Component {
     handleChange(event) {
         this.setState({value: event.target.value});
     }
-
-
     render() {
         return (
             <div className="delivery__order">
@@ -29,7 +27,6 @@ class Adress extends React.Component {
                                         <option value="uk">Украина</option>
                                         <option value="kz">Казахстан</option>
                                     </select>
-
                         </div>
                         <div className="form-group-adress">
                             <label>Город</label>
@@ -37,6 +34,7 @@ class Adress extends React.Component {
                         </div>
                     </div>
                     <Delivery/>
+                    <PickUpPoint/>
                 </React.Fragment>
             </div>
         )}

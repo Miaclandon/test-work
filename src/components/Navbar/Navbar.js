@@ -61,7 +61,7 @@ function Navbar() {
             <div className="navbar_menu ">
                 <React.Fragment>
                     <div className="navbar__for__phone">
-                        <NavbarForPhone title="Click me">
+                        <NavbarForPhone title="Меню">
                             <NavbarMenuTopLeft data={itemNavigationMenu}/>
                         </NavbarForPhone>
                     </div>

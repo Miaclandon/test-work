@@ -3,19 +3,24 @@ import Contacts from "./Contacts/Contacts";
 import Adress from "./Adress/Adress";
 import Person from "./Person/Person";
 import './infoOrder.css';
+import Comments from "./Comments/Comments";
+import YourOrder from "./YourOrder/YourOrder";
 
 function InfoOrder() {
     return (
-        <div className="block_order">
+        <div className="order">
+            <h1 className="block_order_header">Оформление заказа</h1>
             <React.Fragment>
-                <div className="block_order_left_checkout">
-                    <h2 className="block_order_header">Оформление заказа</h2>
-                    <Person/>
-                    <Contacts/>
-                    <Adress/>
-                </div>
-                <div className="block_order_right_your_order">
-                        <h2>Ваш заказ</h2>
+                <div className="block_order">
+                    <div className="block_order_left_checkout">
+                        <Person/>
+                        <Contacts/>
+                        <Adress/>
+                        <Comments/>
+                    </div>
+                    <div className="block_order_right_your_order">
+                        <YourOrder/>
+                    </div>
                 </div>
             </React.Fragment>
         </div>
