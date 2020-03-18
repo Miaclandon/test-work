@@ -1,13 +1,11 @@
 import React from "react";
 import "./Delivery.css";
-import YandexMap from "./PickupPoint/Map/Map";
+import PickUpPoint from "./PickupPoint/PickupPoint";
 
 class Delivery extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {
-            selectedOption: "option1"
-        }
+        this.state = "option1";
     }
 
     handleOptionChange = changeEvent => {
@@ -37,7 +35,8 @@ class Delivery extends React.Component{
                                     onChange={this.handleOptionChange}
                                     className="delivery__form-check-input"
                                 />
-                                Option1
+                                &nbsp;&nbsp;Доставка курьерской службой - 710 ₽
+                                <p>(Срок доставки - 1-3 дня)</p>
                             </label>
                         </div>
                         <div className="delivery__form-check">
@@ -50,7 +49,10 @@ class Delivery extends React.Component{
                                     onChange={this.handleOptionChange}
                                     className="delivery__form-check-input"
                                 />
-                                Option2
+                                &nbsp;&nbsp;Доставка транспортной компанией — 210 ₽
+                                <p>(Данный вид доставки возможен при полной
+                                    предоплате заказа. Срок доставки — 3–5 дней)
+                                </p>
                             </label>
                         </div>
                         <div className="delivery__form-check-last">
@@ -58,12 +60,13 @@ class Delivery extends React.Component{
                                 <input
                                     type="radio"
                                     name="react-tips"
-                                    value="option2"
-                                    checked={this.state.selectedOption === "option2"}
+                                    value="option3"
+                                    checked={this.state.selectedOption === "option3"}
                                     onChange={this.handleOptionChange}
                                     className="delivery__form-check-input"
                                 />
-                                Option2
+                                &nbsp;&nbsp;Самовывоз — 180 ₽
+                                <p>Доставка до пункта самовывоза займет 2–3 дня</p>
                             </label>
                         </div>
                     </form>

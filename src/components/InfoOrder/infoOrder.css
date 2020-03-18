@@ -1,7 +1,7 @@
 .order{
     background-color: white;
 }
-.block_order {
+.block_order, .block_order_header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,7 +15,7 @@
     font-family: Georgia;
     font-style: italic;
     font-weight: lighter;
-    font-size: 36px;
+    font-size: 35px;
 }
 .block_order_left_checkout button{
     width: 196px;
@@ -32,4 +32,13 @@
     border-top-style: dashed; /* Стиль линии внизу */
     border-right-style: dashed;
     border-color: #d15b0a; /* Цвет линии внизу */
+}
+@media screen and (max-width: 1024px) {
+    .block_order_header{
+        font-family: Georgia;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 30px;
+        text-align: center;
+    }
 }

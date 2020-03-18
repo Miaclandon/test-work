@@ -19,6 +19,14 @@
     border-right-style: dashed;
     border-color: #d15b0a; /* Цвет линии внизу */
 }
+.on{
+    color:#666;
+    background-color: red;
+}
+.off{
+    color:#888;
+    background-color: white;
+}
 @media screen and (max-width: 1024px) {
     .block_choose_person{
         justify-content: center;

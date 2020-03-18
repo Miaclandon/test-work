@@ -9,8 +9,8 @@ import YourOrder from "./YourOrder/YourOrder";
 function InfoOrder() {
     return (
         <div className="order">
-            <h1 className="block_order_header">Оформление заказа</h1>
             <React.Fragment>
+                <h1 className="block_order_header">Оформление заказа</h1>
                 <div className="block_order">
                     <div className="block_order_left_checkout">
                         <Person/>

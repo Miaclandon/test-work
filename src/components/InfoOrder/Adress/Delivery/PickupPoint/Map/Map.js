@@ -21,6 +21,8 @@ class YandexMap extends React.Component {
                         {coordinates.map(coordinate => <Placemark geometry={coordinate}/>)}
                     </Map>
                 </YMaps>
+                <label htmlFor="map">Ул. Кузнецкий мост, 9/10 стр.2, офис 204
+                    Ежедневно с 12:00 до 22:00</label>
             </div>
         );
     }

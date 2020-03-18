@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    justify-content: space-around;
     border-width: 1.5px; /* Толщина линии внизу */
     border-bottom-style: solid; /* Стиль линии внизу */
     border-color: #d2c8bd; /* Цвет линии внизу */
-    margin-right: 50px;
 }
 li{
     list-style-type: none;

@@ -1,47 +1,41 @@
-import React from "react";
-import './person.css';
-class Person extends React.Component {
+import React, { Component } from "react";
+import GroupToogleButtons from "./GroupToggleButtons/GroupToggleButtons";
+
+class Person extends Component {
     constructor(props) {
         super(props);
-        this.state = {isToggleOn: true};
 
-        this.handleClick = this.handleClick.bind(this);
+        this.onButtonClick = this.onButtonClick.bind(this);
+        this.state = {
+            selectedButton: [],
+            person: [
+                "Физическое лицо",
+                "Юридическое лицо"
+            ]
+        };
     }
-    handleClick() {
-        this.setState(prevState => ({
-            isToggleOn: !prevState.isToggleOn
-        }));
+
+    onButtonClick(selected) {
+        const index = this.state.selectedButton.indexOf(selected);
+        if (index < 0) {
+            this.state.selectedButton.push(selected);
+        } else {
+            this.state.selectedButton.splice(index, 1);
+        }
+        this.setState({ selectedButton: [...this.state.selectedButton] });
     }
     render() {
-        return (
-            // <button onClick={this.handleClick}>
-            //     {this.state.isToggleOn ? 'ON' : 'OFF'}
-            // </button>
-            <div className="block_choose_person">
-                <React.Fragment>
-                    <button onClick={this.handleClick}>Физическое лицо</button>
-                    <button onClick={this.handleClick}>Юридическое лицо  </button>
-                </React.Fragment>
-            </div>
+        const { person, selectedButton } = this.state;
 
+        return (
+            <div className="container centered">
+                <GroupToogleButtons
+                    values={person}
+                    selectedButton={selectedButton}
+                    onButtonClick={this.onButtonClick}
+                />
+            </div>
         );
     }
 }
 export default Person;
-// import React from 'react';
-// import './person.css';
-//
-//
-// const Person = (props) => {
-//     console.log(props.style);
-//     return(
-//         <button
-//             style= {props.style}
-//             className = {props.type=='primary'? 'btn btn-primary' : 'btn btn-secondary'}
-//             onClick= {props.action} >
-//             {props.title}
-//         </button>)
-// }
-//
-//
-// export default Person;
