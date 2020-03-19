@@ -9,50 +9,58 @@ import NavbarMenuTopLeft from "./NavbarTop/NavbarMenuTopLeft/NavbarMenuTopLeft";
 const itemNavigationMenu = [
     {
         id:0,
-        name: 'О магазине'
+        name: 'Город: Москва'
     },
     {
         id:1,
-        name: 'Доставка и самовывоз'
+        name: 'Личный кабинет'
     },
     {
         id:2,
-        name: 'Оплата'
+        name: 'О магазине'
     },
     {
         id:3,
-        name: 'Контакты'
+        name: 'Доставка и самовывоз'
     },
     {
         id:4,
-        name: 'Блог'
+        name: 'Оплата'
     },
     {
         id:5,
-        name: 'МЕЛЬНИЦЫ'
+        name: 'Контакты'
     },
     {
         id:6,
-        name: 'ТЕХНИКА'
+        name: 'Блог'
     },
     {
         id:7,
-        name: 'ДЛЯ ВЫПЕЧКИ'
+        name: 'МЕЛЬНИЦЫ'
     },
     {
         id:8,
-        name: 'ПОСУДА'
+        name: 'ТЕХНИКА'
     },
     {
         id:9,
-        name: 'ПРОРАЩИВАТЕЛИ'
+        name: 'ДЛЯ ВЫПЕЧКИ'
     },
     {
         id:10,
-        name: 'ДЕТЯМ'
+        name: 'ПОСУДА'
     },
     {
         id:11,
+        name: 'ПРОРАЩИВАТЕЛИ'
+    },
+    {
+        id:12,
+        name: 'ДЕТЯМ'
+    },
+    {
+        id:13,
         name: 'ЧАЙ ИЗ НЕПАЛА'
     },
 ];
