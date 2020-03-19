@@ -1,14 +1,34 @@
 import React from "react";
 import "./Delivery.css";
 import PickUpPoint from "./PickupPoint/PickupPoint";
+import OrderProducts from "../../YourOrder/OrderProducts/OrderProducts";
+import YourOrder from "../../YourOrder/YourOrder";
 
 class Delivery extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = "option1";
+
+    constructor() {
+        super();
+
+        this.state = {
+            delivery: 'Доставка курьерской службой'
+        };
+
+        this.onRadioChange = this.onRadioChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this)
+        }
+
+
+    onRadioChange = (e) => {
+        this.setState({
+            delivery: e.target.value
+        });
     }
 
-    handleOptionChange = changeEvent => {
+    onSubmit = (e) => {
+        e.preventDefault();
+         console.log(this.state);
+    }
+ /*   handleOptionChange = changeEvent => {
         this.setState({
             selectedOption: changeEvent.target.value
         })
@@ -18,21 +38,20 @@ class Delivery extends React.Component{
         formSubmitEvent.preventDefault();
 
         console.log("You have submitted:", this.state.selectedOption)
-    }
+    }*/
     render() {
         return(
             <div className="delivery__order">
                 <h2>Способ доставки</h2>
                 <React.Fragment>
-                    <form onSubmit={this.handleFormSubmit}>
+                    <form onSubmit={this.onSubmit}>
                         <div className="delivery__form-check">
                             <label>
                                 <input
                                     type="radio"
-                                    name="react-tips"
-                                    value="option1"
-                                    checked={this.state.selectedOption === "option1"}
-                                    onChange={this.handleOptionChange}
+                                    value="Доставка курьерской службой"
+                                    checked={this.state.delivery === "Доставка курьерской службой"}
+                                    onChange={this.onRadioChange}
                                     className="delivery__form-check-input"
                                 />
                                 &nbsp;&nbsp;Доставка курьерской службой - 710 ₽
@@ -43,10 +62,9 @@ class Delivery extends React.Component{
                             <label>
                                 <input
                                     type="radio"
-                                    name="react-tips"
-                                    value="option2"
-                                    checked={this.state.selectedOption === "option2"}
-                                    onChange={this.handleOptionChange}
+                                    value="Доставка транспортной компанией"
+                                    checked={this.state.delivery === "Доставка транспортной компанией"}
+                                    onChange={this.onRadioChange}
                                     className="delivery__form-check-input"
                                 />
                                 &nbsp;&nbsp;Доставка транспортной компанией — 210 ₽
@@ -59,10 +77,9 @@ class Delivery extends React.Component{
                             <label>
                                 <input
                                     type="radio"
-                                    name="react-tips"
-                                    value="option3"
-                                    checked={this.state.selectedOption === "option3"}
-                                    onChange={this.handleOptionChange}
+                                    value="Самовывоз"
+                                    checked={this.state.delivery === "Самовывоз"}
+                                    onChange={this.onRadioChange}
                                     className="delivery__form-check-input"
                                 />
                                 &nbsp;&nbsp;Самовывоз — 180 ₽
