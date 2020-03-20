@@ -1,7 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import './Adress.css';
 import PickUpPoint from "./Delivery/PickupPoint/PickupPoint";
 import Delivery from "./Delivery/Delivery";
+import store from "./Delivery/store";
 
 class Adress extends React.Component {
     constructor(props) {
@@ -33,7 +35,12 @@ class Adress extends React.Component {
                             <input type="text" name="city"/>
                         </div>
                     </div>
-                    <Delivery/>
+                    <Provider store={store}>
+                        <div>
+                            <Delivery/>
+                            <Values form="delivery"/>
+                        </div>
+                    </Provider>
                     <PickUpPoint/>
                 </React.Fragment>
             </div>
