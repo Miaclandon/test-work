@@ -1,0 +1,29 @@
+.delivery__form-check{
+    border-style: dashed;
+    border-color: #f0e4ca;
+    border-bottom: none;
+}
+.delivery__form-check, .delivery__form-check-last{
+    width: 372px;
+    min-height: 66px;
+    margin-bottom: 5px;
+    font-family: Calibri;
+    font-size: 17px;
+    padding: 13px 0 6px 17px;
+}
+.delivery__form-check-last{
+    border-style: dashed;
+    border-color: #f0e4ca;
+}
+.delivery__form-check p, .delivery__form-check-last p{
+    margin-top: 3px;
+    margin-left: 28px;
+    color: #c4b7b1;
+    font-family: Calibri;
+    font-size: 13px;
+}
+@media screen and (max-width: 1024px) {
+    .delivery__form-check, .delivery__form-check-last {
+        width: 270px;
+    }
+}

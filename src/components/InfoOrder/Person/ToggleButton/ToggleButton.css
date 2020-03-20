@@ -1,0 +1,35 @@
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary {
+    text-decoration: red;
+    border-width: 1.5px; /* Толщина линии внизу */
+    border-bottom-style: dashed; /* Стиль линии внизу */
+    border-top-style: dashed; /* Стиль линии внизу */
+    border-right-style: dashed;
+    border-color: #d15b0a; /* Цвет линии внизу */
+}
+
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover {
+    text-decoration: red;
+    border-width: 1.5px; /* Толщина линии внизу */
+    border-bottom-style: dashed; /* Стиль линии внизу */
+    border-top-style: dashed; /* Стиль линии внизу */
+    border-right-style: dashed;
+    border-color: #d15b0a; /* Цвет линии внизу */
+}
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+<svg id="Кнопка" xmlns="http://www.w3.org/2000/svg" width="227" height="47" viewBox="0 0 227 47">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+        stroke: #ff6900;
+      }
+
+      .cls-1 {
+        stroke-width: 1px;
+      }
+
+      .cls-2 {
+        font-size: 14px;
+        fill: #f70;
+        font-family: Calibri;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Прямоугольник_скругл._углы_8" data-name="Прямоугольник, скругл. углы 8" class="cls-1" x="0.5" y="0.5" width="226" height="46" rx="2" ry="2"/>
+  <text id="К_выбору_способа_оплаты" data-name="К выбору способа оплаты" class="cls-2" x="28.5" y="27.833">К выбору способа оплаты</text>
+  <path id="Фигура_112" data-name="Фигура 112" class="cls-3" d="M834,1728l4,5-4,5" transform="translate(-638.5 -1709.5)"/>
+</svg>

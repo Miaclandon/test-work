@@ -1,0 +1,34 @@
+.comments_to_order{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+}
+.comments_to_order h2{
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 25px;
+}
+.comment{
+    width: 392px;
+    height: 179px;
+    text-align: start;
+}
+.comments_to_order button{
+    margin-top: 29px;
+    width: 226px;
+    height: 47px;
+    margin-left: 170px;
+    border: 0.5px solid #ff6900;
+    border-radius: 5px;
+    background-image: url("./images/Кнопка.svg");
+}
+@media screen and (max-width: 1024px) {
+    .comment{
+        width: 90%;
+    }
+    .comments_to_order button{
+        margin-left: 0;
+    }
+}

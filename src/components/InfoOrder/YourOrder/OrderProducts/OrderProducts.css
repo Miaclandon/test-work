@@ -1,0 +1,9 @@
+.products_your_order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.item__your_order{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,9 +1,5 @@
-import React from "react";
-import "./Delivery.css";
-import PickUpPoint from "./PickupPoint/PickupPoint";
-import OrderProducts from "../../YourOrder/OrderProducts/OrderProducts";
-import YourOrder from "../../YourOrder/YourOrder";
-
+import React from 'react';
+import './Delivery.css';
 class Delivery extends React.Component{
 
     constructor() {
@@ -28,17 +24,6 @@ class Delivery extends React.Component{
         e.preventDefault();
          console.log(this.state);
     }
- /*   handleOptionChange = changeEvent => {
-        this.setState({
-            selectedOption: changeEvent.target.value
-        })
-    }
-
-    handleFormSubmit = formSubmitEvent => {
-        formSubmitEvent.preventDefault();
-
-        console.log("You have submitted:", this.state.selectedOption)
-    }*/
     render() {
         return(
             <div className="delivery__order">
@@ -92,5 +77,4 @@ class Delivery extends React.Component{
         )
     }
 }
-
 export default Delivery;

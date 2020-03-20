@@ -1,7 +1,7 @@
 import React from 'react';
 import './Adress.css';
-import Delivery from "./Delivery/Delivery";
 import PickUpPoint from "./Delivery/PickupPoint/PickupPoint";
+import Delivery from "./Delivery/Delivery";
 
 class Adress extends React.Component {
     constructor(props) {

@@ -1,0 +1,11 @@
+.block_your_order{
+    border: 1px solid #f0e4ca;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+.block_your_order h2{
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 25px;
+}
