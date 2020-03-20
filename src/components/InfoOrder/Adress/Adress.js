@@ -4,6 +4,7 @@ import './Adress.css';
 import PickUpPoint from "./Delivery/PickupPoint/PickupPoint";
 import Delivery from "./Delivery/Delivery";
 import store from "./Delivery/store";
+import showResults from "./Delivery/showResults";
 
 class Adress extends React.Component {
     constructor(props) {
@@ -37,8 +38,8 @@ class Adress extends React.Component {
                     </div>
                     <Provider store={store}>
                         <div>
-                            <Delivery/>
-                            <Values form="delivery"/>
+                            <Delivery onSubmit={showResults}/>
+                            {/*<Values form='delivery'/>*/}
                         </div>
                     </Provider>
                     <PickUpPoint/>

@@ -4,7 +4,7 @@ import './Delivery.css';
 import RadioButton from "./RadioButton/RadioButton";
 
 const Delivery = props => {
-const { handleSubmit } = props;
+const { handleSubmit, pristine, reset, submitting } = props;
     return (
             <form onSubmit={handleSubmit}>
             <div>
@@ -15,6 +15,12 @@ const { handleSubmit } = props;
                     <RadioButton name="delivery" caption="Доставка курьерской службой" radioButtonValue="Доставка курьерской службой"/>
                 </div>
             </div>
+                <div>
+                    <button type="submit" disabled={pristine || submitting}>Submit</button>
+                    <button type="button" disabled={pristine || submitting} onClick={reset}>
+                        Clear Values
+                    </button>
+                </div>
         </form>
     );
     };
